@@ -32,6 +32,19 @@ npm run build
 yarn build
 ```
 
+## 🐳 Docker
+
+Runs Strapi in develop mode with a Postgres database. Admin panel: <http://localhost:1337/admin>
+
+```bash
+docker compose up -d          # start
+docker compose logs -f strapi # watch logs
+docker compose down           # stop (data kept)
+docker compose down -v        # stop AND delete the database
+```
+
+After adding an npm package, rebuild with `docker compose up -d --build`.
+
 ## ⚙️ Deployment
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
